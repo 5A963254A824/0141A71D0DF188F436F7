@@ -3,7 +3,7 @@
 //=============================================================================
 
 /*:
- * @plugindesc (v1.0) Comandos de batalhas animados por imagens.
+ * @plugindesc (v1.1) Comandos de batalhas animados por imagens.
  * @author Moghunter
  *
  * @param Mode
@@ -119,9 +119,21 @@
  * @desc Ativar Input para o lado direito e esquerdo.
  * @default true
  *
+ * @param Face
+ * @desc Ativar face do personagem.
+ * @default true
+ *
+ * @param Face X-axis
+ * @desc Definição X-Axis da face do personagem.
+ * @default 0
+ *
+ * @param Face Y-axis
+ * @desc Definição Y-Axis da face do personagem.
+ * @default -50 
+ *
  * @help  
  * =============================================================================
- * +++ MOG - Battle Commands (v1.0) +++
+ * +++ MOG - Battle Commands (v1.1) +++
  * By Moghunter 
  * https://atelierrgss.wordpress.com/
  * =============================================================================
@@ -142,7 +154,24 @@
  * ... 
  *
  * =============================================================================
+ * FACES
+ * =============================================================================
+ * Para definir as faces dos personagens nomeie da seguinte forma.
  * 
+ * Face_ + Actor ID.png
+ *
+ * EG
+ *
+ * Face_1.png
+ * Face_2.png
+ * Face_3.png
+ * ...
+ *
+ * =============================================================================
+ * HISTÓRICO
+ * =============================================================================
+ * (v1.1) - Melhoria na compatibilidade de plugins.
+ *        - Adição da opção de apresentar a face do personagem. 
  */
 
 //=============================================================================
@@ -153,12 +182,12 @@
 　　var Moghunter = Moghunter || {}; 
 
     Moghunter.parameters = PluginManager.parameters('MOG_BattleCommands');
-	Moghunter.bcom_mode = Number(Moghunter.parameters['Mode'] || 1);
-    Moghunter.bcom_lay_x = Number(Moghunter.parameters['Layout X-axis'] || 22);
-    Moghunter.bcom_lay_y = Number(Moghunter.parameters['Layout Y-axis'] || 15);
-	Moghunter.bcom_com_x = Number(Moghunter.parameters['Com X-axis'] || 0);
+	Moghunter.bcom_mode = Number(Moghunter.parameters['Mode'] || 0);
+    Moghunter.bcom_lay_x = Number(Moghunter.parameters['Layout X-axis'] || -45);
+    Moghunter.bcom_lay_y = Number(Moghunter.parameters['Layout Y-axis'] || -25);
+	Moghunter.bcom_com_x = Number(Moghunter.parameters['Com X-axis'] || -10);
 	Moghunter.bcom_com_y = Number(Moghunter.parameters['Com Y-axis'] || 0);
-	Moghunter.bcom_arrow = String(Moghunter.parameters['Arrow'] || false);
+	Moghunter.bcom_arrow = String(Moghunter.parameters['Arrow'] || true);
 	Moghunter.bcom_arrow_x = Number(Moghunter.parameters['Arrow X-axis'] || 5);
 	Moghunter.bcom_arrow_y = Number(Moghunter.parameters['Arrow Y-axis'] || 0);
 	Moghunter.bcom_row_max = Number(Moghunter.parameters['Row Max'] || 4);
@@ -166,21 +195,24 @@
 	Moghunter.bcom_zoom_rate = Number(Moghunter.parameters['Zoom Rate'] || 1.30);
 	Moghunter.bcom_zoom_speed = Number(Moghunter.parameters['Zoom Speed'] || 0.015);
 	Moghunter.bcom_zoom_loop = String(Moghunter.parameters['Zoom Loop'] || true);
-	Moghunter.bcom_slide_effect = String(Moghunter.parameters['Slide Animation'] || false);
-	Moghunter.bcom_slide_x = Number(Moghunter.parameters['Slide X'] || 0);
+	Moghunter.bcom_slide_effect = String(Moghunter.parameters['Slide Animation'] || true);
+	Moghunter.bcom_slide_x = Number(Moghunter.parameters['Slide X'] || 30);
 	Moghunter.bcom_slide_y = Number(Moghunter.parameters['Slide Y'] || 0);
-	Moghunter.bcom_com_name = String(Moghunter.parameters['Com Name'] || true);
+	Moghunter.bcom_com_name = String(Moghunter.parameters['Com Name'] || false);
 	Moghunter.bcom_com_name_x = Number(Moghunter.parameters['Com Name X-axis'] || 55);
 	Moghunter.bcom_com_name_y = Number(Moghunter.parameters['Com Name Y-axis'] || 75);
-	Moghunter.bcom_com_font_size = Number(Moghunter.parameters['Com Font Sizew'] || 22);
+	Moghunter.bcom_com_font_size = Number(Moghunter.parameters['Com Font Size'] || 22);
 	Moghunter.bcom_ring_range = Number(Moghunter.parameters['Ring Range'] || 70);
 	Moghunter.bcom_pi_range = Number(Moghunter.parameters['Pi Range'] || 2.0);
 	Moghunter.bcom_ring_anime = String(Moghunter.parameters['Ring Motion'] || true);
 	Moghunter.bcom_side_input = String(Moghunter.parameters['Side Input'] || true);
-    Moghunter.bcom_cursor = String(Moghunter.parameters['Cursor'] || false);	
+    Moghunter.bcom_cursor = String(Moghunter.parameters['Cursor'] || true);	
     Moghunter.bcom_cursor_x = Number(Moghunter.parameters['Cursor X-axis'] || 0);
-    Moghunter.bcom_cursor_y = Number(Moghunter.parameters['Cursor Y-axis'] || 0)
-    Moghunter.bcom_cursor_slide = String(Moghunter.parameters['Cursor Slide'] || false);
+    Moghunter.bcom_cursor_y = Number(Moghunter.parameters['Cursor Y-axis'] || 0);
+    Moghunter.bcom_cursor_slide = String(Moghunter.parameters['Cursor Slide'] || true);
+    Moghunter.bcom_face = String(Moghunter.parameters['Face'] || true);	
+    Moghunter.bcom_face_x = Number(Moghunter.parameters['Face X-axis'] || 0);
+    Moghunter.bcom_face_y = Number(Moghunter.parameters['Face Y-axis'] || -50);	
 	
 if (Imported.MOG_BattleHud) {
 //=============================================================================
@@ -231,20 +263,43 @@ Game_Interpreter.prototype.command129 = function() {
 var _alias_mog_bcom_wcom_initialize = Window_ActorCommand.prototype.initialize;
 Window_ActorCommand.prototype.initialize = function(x, y) {	
 	_alias_mog_bcom_wcom_initialize.call(this,x, y);
-	if (!this._com_images) {this.battle_commands_initialize()};
+	//if (!this._com_images) {this.battle_commands_initialize()};
+
+};
+
+var _mog_batCom_Wact_setup = Window_ActorCommand.prototype.setup;
+Window_ActorCommand.prototype.setup = function(actor) {
+    _mog_batCom_Wact_setup.call(this,actor);
+	if (this._actor) {this.battle_commands_initialize()};
 };
 
 //==============================
 // * Battle Com Initialize
 //==============================
 Window_ActorCommand.prototype.battle_commands_initialize = function() {
-	var old_actor = this._actor;
+	if (!this._actor) {this.clearComSprites();return};
     this.com_pic_initialize();
-    this.get_full_list();
 	this.load_com_images();
-    this.create_com_sprites();
-	this._actor = old_actor;
+	this.create_com_sprites();
+    this.refresh_com_sprites()
 	this._old_visible = this.visible;
+};
+
+//==============================
+// * clear Com Sprites
+//==============================
+Window_ActorCommand.prototype.clearComSprites = function() {
+    if (this._layout) {this.removeChild(this._layout);this._layout = null};
+    if (this._face) {this.removeChild(this._face);this._face = null};
+    if (this._cursor_b) {this.removeChild(this._cursor_b); this._cursor_b = null};
+	if (this._com_name) {this.removeChild(this._com_name);this._com_name = null};
+	if (this._arrow) {
+		for (var i = 0; i < 2; i++) {
+		    this.removeChild(this._arrow[i])	
+		};
+		this._arrow = null;
+	};	
+    if (this._com_sprites) {this.com_sprites_clear();this._com_sprites = null};
 };
 
 //==============================
@@ -253,7 +308,6 @@ Window_ActorCommand.prototype.battle_commands_initialize = function() {
 Window_ActorCommand.prototype.com_pic_initialize = function() {
 	this.com_sprites_clear();
 	this._com_mode_b = Math.min(Math.max(Moghunter.bcom_mode,0),1); 
-	this._com_list = [];
     this._com_images = [];
     this._com_sprites = [];
 	this._com_index = this._index;
@@ -296,27 +350,14 @@ Window_ActorCommand.prototype.com_sprites_clear = function() {
 };
 
 //==============================
-// * get Full List
-//==============================
-Window_ActorCommand.prototype.get_full_list = function() {
-	for (var i = 0; i < $gameParty.battleMembers().length; i++) {
-		  this._actor = $gameParty.battleMembers()[i];
-	      this.makeCommandList();
-		  this._com_list[i] = this._list;
-		  this._com_images[i] = [];		  
-		  this.clearCommandList();
-		  this._actor = null;
-	};	
-};
-
-//==============================
 // * Load Com Images
 //==============================
 Window_ActorCommand.prototype.load_com_images = function() {
-	for (var i = 0; i < this._com_list.length; i++) {
-		 if (this._max_com < this._com_list[i].length) {this._max_com = this._com_list[i].length}
-		 for (var r = 0; r < this._com_list[i].length; r++) {
-		      this._com_images[i].push(ImageManager.loadBcom("Com_" + this._com_list[i][r].name));
+	this._com_images = [];
+	for (var i = 0; i < this._list.length; i++) {
+		 if (this._max_com < this._list.length) {this._max_com = this._list.length}
+		 for (var r = 0; r < this._list.length; r++) {
+		      this._com_images.push(ImageManager.loadBcom("Com_" + this._list[r].name));
 		 };
 	};
 	this._layout_img = ImageManager.loadBcom("Layout");
@@ -329,6 +370,7 @@ Window_ActorCommand.prototype.load_com_images = function() {
 //==============================
 Window_ActorCommand.prototype.create_com_sprites = function() {
     this.create_layout();
+	if (String(Moghunter.bcom_face) === "true") {this.create_face()};
     this.create_commands();
 	if (String(Moghunter.bcom_cursor) === "true") {this.create_cursor()};
     if (String(Moghunter.bcom_arrow) === "true") {this.create_arrows()};
@@ -339,6 +381,7 @@ Window_ActorCommand.prototype.create_com_sprites = function() {
 // * Create Layout
 //==============================
 Window_ActorCommand.prototype.create_layout = function() {	
+    if (this._layout) {this.removeChild(this._layout)};
 	this._layout = new Sprite(this._layout_img);
 	this._layout.x = Moghunter.bcom_lay_x;
 	this._layout.y = Moghunter.bcom_lay_y;
@@ -346,9 +389,23 @@ Window_ActorCommand.prototype.create_layout = function() {
 };
 
 //==============================
+// * Create Face
+//==============================
+Window_ActorCommand.prototype.create_face = function() {	
+    if (this._face) {this.removeChild(this._face)};
+	var fname = String("Face_" + this._actor._actorId)
+	var face_img = ImageManager.loadBcom(fname);
+	this._face = new Sprite(face_img);
+	this._face.x = Moghunter.bcom_face_x;
+	this._face.y = Moghunter.bcom_face_y;
+	this.addChild(this._face);
+};
+
+//==============================
 // * Create Cursor
 //==============================
 Window_ActorCommand.prototype.create_cursor = function() {	
+    if (this._cursor_b) {this.removeChild(this._cursor_b)};
 	this._cursor_b = new Sprite(this._cursor_b_img);
 	this._cursor_b.anchor.x = 0.5;
 	this._cursor_b.anchor.y = 0.5;	
@@ -400,6 +457,11 @@ Window_ActorCommand.prototype.create_commands = function() {
 //==============================
 Window_ActorCommand.prototype.create_arrows = function() {	
     if (this._com_mode_b === 1) {return}
+	if (this._arrow) {
+		for (var i = 0; i < 2; i++) {
+		    this.removeChild(this._arrow[i])	
+		};
+	};
 	this._arrow = [];
 	for (var i = 0; i < 2; i++) {
 		 this._arrow[i] = new Sprite(this._arrow_img);
@@ -413,6 +475,7 @@ Window_ActorCommand.prototype.create_arrows = function() {
 // * Create Com Name
 //==============================
 Window_ActorCommand.prototype.create_com_name = function() {	
+    if (this._com_name) {this.removeChild(this._com_name)}; 
 	this._com_name = new Sprite(new Bitmap(90,32))
 	this._com_name.x = Moghunter.bcom_com_name_x + 45;
 	this._com_name.y = Moghunter.bcom_com_name_y + 16; 
@@ -440,15 +503,6 @@ Window_ActorCommand.prototype.refresh_index = function() {
 };
 
 //==============================
-// * makeCommandList
-//==============================
-var _alias_mog_bcom_wcom_makeCommandList = Window_ActorCommand.prototype.makeCommandList;
-Window_ActorCommand.prototype.makeCommandList = function() {
-	_alias_mog_bcom_wcom_makeCommandList.call(this);
- 	if (BattleManager._actorIndex >= 0 && this._com_sprites) {this.refresh_com_sprites()};
-};
-	
-//==============================
 // * Refresh Com Sprites
 //==============================
 Window_ActorCommand.prototype.refresh_com_sprites = function() {
@@ -468,7 +522,7 @@ Window_ActorCommand.prototype.refresh_com_sprites = function() {
 //==============================
 Window_ActorCommand.prototype.refresh_bitmap_com = function() {	
     for (var i = 0; i < this.maxCom(); i++) {
-		this._com_sprites[i].bitmap = this._com_images[BattleManager._actorIndex][i];
+		this._com_sprites[i].bitmap = this._com_images[i];
 		this._wh[0] = this.width / 2;
 		if (this._wh[1] < this._com_sprites[i].bitmap.height) {this._wh[1] = this._com_sprites[i].bitmap.height};			
 	};
@@ -500,7 +554,6 @@ Window_ActorCommand.prototype.update_arrow_visible = function() {
     if (this.maxCom() > (this.limit_rows_sp() + 1)) {this._arrow[1].visible = true;
 	   if (this._index === (this.maxCom() - 1)) {this._arrow[1].visible = false}
 	};
-
 };
 
 //==============================
@@ -594,7 +647,6 @@ Window_ActorCommand.prototype.update_side_input = function() {
  		    this._index--;	    
 	     	if (this._index < 0) {this._index = (this.maxCom() - 1)};	
 		}
-
     };
 	};
 };
@@ -691,6 +743,10 @@ Window_ActorCommand.prototype.update_battle_commands = function() {
 	if (this._com_name) {this._com_name.opacity += this.com_fade_speed()};
 	this._layout.opacity += this.com_fade_speed();
 	this.update_input_commands();
+	if (this._com_mode_b === 0 && this._wh && this._wh[1] === 0) {
+		this.refresh_bitmap_com();
+		this.refresh_arrow_position();
+	};	
 };
 
 //==============================

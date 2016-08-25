@@ -3,16 +3,16 @@
 //=============================================================================
 
 /*:
- * @plugindesc (v2.2) Permite customizar o layout de batalha.
+ * @plugindesc (v3.1) Permite customizar o layout de batalha.
  * @author Moghunter
  *
  * @param Hud X-Axis
  * @desc Definição da posição X-Axis da Hud.
- * @default -90
+ * @default 90
  *
  * @param Hud Y-Axis
  * @desc Definição da posição Y-Axis da Hud.
- * @default 430
+ * @default 450
  *
  * @param Hud Space X
  * @desc Define o espaço na horizontal entre as huds.
@@ -29,7 +29,7 @@
  * @param Command Auto Adjust
  * @desc Ativar ajuste automático baseado na posição
  * da Hud. (false - Define a posição fixa.)
- * @default true
+ * @default false 
  *
  * @param Max Battle Members
  * @desc Quantidade de maxima de battler na batalha.
@@ -40,7 +40,7 @@
  * @param Layout2 Visible
  * @desc Ativar o segunda imagem do layout, esta imagem 
  * ficará acima das faces e medidores.
- * @default true
+ * @default false
  *
  * @param Layout2 X-Axis
  * @desc Definição da posição X-Axis da Hud.
@@ -48,8 +48,8 @@
  *
  * @param Layout2 Y-Axis
  * @desc Definição da posição Y-Axis da Hud.
- * @default 0
- * 
+ * @default 0 
+ *
  * @param >> TURN ===================
  * @desc 
  * @default  
@@ -64,7 +64,7 @@
  *
  * @param Turn Y-Axis
  * @desc Definição da posição Y-Axis do turno.
- * @default 20
+ * @default 0
  *
  * @param >> FACE ===================
  * @desc 
@@ -76,11 +76,11 @@
  *
  * @param Face X-Axis
  * @desc Definição da posição X-Axis da face.
- * @default 55
+ * @default 54
  *
  * @param Face Y-Axis
  * @desc Definição da posição Y-Axis da face.
- * @default 120
+ * @default 16
  *
  * @param Face Shake Animation
  * @desc Ativar animação de tremer da face.
@@ -109,11 +109,11 @@
  *
  * @param Name X-Axis
  * @desc Definição da posição X-Axis do nome.
- * @default 50
+ * @default 70
  *
  * @param Name Y-Axis
  * @desc Definição da posição Y-Axis do nome.
- * @default 150 
+ * @default -7
  *
  * @param Name Font Size
  * @desc Definição do tamanho da fonte do nome.
@@ -137,37 +137,37 @@
  *
  * @param HP Meter X-Axis
  * @desc Definição da posição X-Axis do medidor de HP.
- * @default 106
+ * @default 164
  *
  * @param HP Meter Y-Axis
  * @desc Definição da posição Y-Axis do medidor de HP.
- * @default 70
+ * @default 21
  *
  * @param HP Meter Angle
  * @desc Ángulo do medidor.
- * @default -0.47
+ * @default 0 
  *
  * @param HP Meter Flow Anime
  * @desc Ativar animação de gradiente no medidor.
  * É necessário que a imagem tenha 3x a largura do medidor.
- * @default false
+ * @default true
  *
  * @param HP Number Visible
  * @desc Apresentar o numero de HP
- * @default true   
+ * @default true
  *
  * @param HP Number Align type
  * @desc Definição do tipo de alinhamento dos números.
  * (0 - right 1) (Center 2 - Left) (3 - Diagonal)
- * @default 3
- * 
+ * @default 0 
+ *
  * @param HP Number X-Axis
  * @desc Definição da posição X-Axis do numero de HP.
- * @default 110
+ * @default 265
  *
  * @param HP Number Y-Axis
  * @desc Definição da posição Y-Axis do numero de HP.
- * @default 43
+ * @default 0
  * 
  * @param MaxHP Number Visible
  * @desc Apresentar o numero de HP maximo.
@@ -191,20 +191,20 @@
  *
  * @param MP Meter X-Axis
  * @desc Definição da posição X-Axis do medidor de MP.
- * @default 127
+ * @default 297
  *
  * @param MP Meter Y-Axis
  * @desc Definição da posição Y-Axis do medidor de MP.
- * @default 121
+ * @default 21
  *
  * @param MP Meter Angle
  * @desc Ángulo do medidor.
- * @default -0.47
+ * @default 0
  *
  * @param MP Meter Flow Anime
  * @desc Ativar animação de gradiente no medidor.
  * É necessário que a imagem tenha 3x a largura do medidor.
- * @default false 
+ * @default true
  *
  * @param MP Number Visible
  * @desc Apresentar o numero de MP
@@ -213,15 +213,15 @@
  * @param MP Number Align type
  * @desc Definição do tipo de alinhamento dos números.
  * (0 - right 1) (Center 2 - Left) (3 - Diagonal)
- * @default 3
- * 
+ * @default 0  
+ *
  * @param MP Number X-Axis
  * @desc Definição da posição X-Axis do numero de MP.
- * @default 130
+ * @default 397
  *
  * @param MP Number Y-Axis
  * @desc Definição da posição Y-Axis do numero de MP.
- * @default 95
+ * @default 0
  *
  * @param MaxMP Number Visible
  * @desc Apresentar o numero de MP maximo.
@@ -245,37 +245,37 @@
  *
  * @param TP Meter X-Axis
  * @desc Definição da posição X-Axis do medidor de TP.
- * @default 13
+ * @default 420
  *
  * @param TP Meter Y-Axis
  * @desc Definição da posição Y-Axis do medidor de TP.
- * @default 78
+ * @default 21
  *
  * @param TP Meter Angle
  * @desc Ángulo do medidor.
- * @default -1.57
+ * @default 0
  *
  * @param TP Meter Flow Anime
  * @desc Ativar animação de gradiente no medidor.
  * É necessário que a imagem tenha 3x a largura do medidor.
- * @default false 
+ * @default true
  *
  * @param TP Number Visible
  * @desc Apresentar o numero de TP.
- * @default true   
+ * @default true
  *
  * @param TP Number Align type
  * @desc Definição do tipo de alinhamento dos números.
  * (0 - right 1) (Center 2 - Left) (3 - Diagonal)
- * @default 2
+ * @default 0 
  *
  * @param TP Number X-Axis
  * @desc Definição da posição X-Axis do numero de TP.
- * @default 20
+ * @default 520
  *
  * @param TP Number Y-Axis
  * @desc Definição da posição Y-Axis do numero de TP.
- * @default 60
+ * @default 0
  *
  * @param MaxTP Number Visible
  * @desc Apresentar o numero de TP maximo.
@@ -299,11 +299,11 @@
  *
  * @param ATB Meter X-Axis
  * @desc Definição da posição X-Axis do medidor de ATB.
- * @default 80
+ * @default 0
  *
  * @param ATB Meter Y-Axis
  * @desc Definição da posição Y-Axis do medidor de ATB.
- * @default 155
+ * @default 32
  *
  * @param ATB Meter Angle
  * @desc Ángulo do medidor.
@@ -324,11 +324,11 @@
  *
  * @param States X-Axis
  * @desc Definição da posição X-Axis das condições.
- * @default 10
+ * @default 532
  *
  * @param States Y-Axis
  * @desc Definição da posição Y-Axis das condições.
- * @default 150
+ * @default 0
  *
  * @param >> W COMMAND ===================
  * @desc 
@@ -336,11 +336,11 @@
  *
  * @param W Command X-Axis
  * @desc Definição do posição X-axis do comando.
- * @default 0    
+ * @default 15    
  *
  * @param W Command Y-Axis
  * @desc Definição do posição Y-axis do comando.
- * @default -15
+ * @default 440
  *
  * @param W Command Width
  * @desc Definição da largura da janela.
@@ -578,6 +578,14 @@
  * @desc Ativar o Layout da tela.
  * @default true
  *
+ * @param Screen X-Axis
+ * @desc Definição do posição X-axis da imagem.
+ * @default 0
+ *
+ * @param Screen Y-Axis
+ * @desc Definição do posição Y-axis da imagem.
+ * @default 0 
+ *
  * @param >> CUSTOM POSITION ===================
  * @desc 
  * @default   
@@ -585,32 +593,32 @@
  * @param Custom Position 1
  * @desc Definição da posição da hud.
  * Ex -     200,200
- * @default
+ * @default 220,450
  *
  * @param Custom Position 2
  * @desc Definição da posição da hud.
  * Ex -     200,200
- * @default
+ * @default 220,495
  *
  * @param Custom Position 3
  * @desc Definição da posição da hud.
  * Ex -     200,200
- * @default
+ * @default 220,540
  *
  * @param Custom Position 4
  * @desc Definição da posição da hud.
  * Ex -     200,200
- * @default
+ * @default 220,585
  *
  * @param Custom Position 5
  * @desc Definição da posição da hud.
  * Ex -     200,200
- * @default
+ * @default 220,630
  *
  * @param Custom Position 6
  * @desc Definição da posição da hud.
  * Ex -     200,200
- * @default  
+ * @default 220,675
  *
  * @param Custom Position 7
  * @desc Definição da posição da hud.
@@ -624,7 +632,7 @@
  *
  * @help  
  * =============================================================================
- * +++ MOG_BattleHud (v2.2) +++
+ * +++ MOG_BattleHud (v3.1) +++
  * By Moghunter 
  * https://atelierrgss.wordpress.com/
  * =============================================================================
@@ -662,14 +670,45 @@
  * ...
  *
  * =============================================================================
+ * PLUGIN COMMANDS
+ * ============================================================================= 
+ * Para ocultar a hud use o commando abaixo.
+ *
+ * bhud_disable
+ * 
+ * Para apresentar a hud use o commando abaixo
+ *
+ * bhud_enable 
+ *
+ * =============================================================================
+ * SCRIPT COMMANDS
+ * ============================================================================= 
+ * Para ocultar a hud use o commando abaixo.
+ *
+ * $gameSystem._bhud_visible = false
+ *
+ * Para apresentar a hud use o commando abaixo.
+ *
+ * $gameSystem._bhud_visible = true
+ *  
+ * =============================================================================
  * HISTÓRICO
  * =============================================================================
+ * (3.1) - Correção do crash quando a face é desativada. 
+ * (3.0) - Correção da função da face animada. 
+ * (2.9) - Modificação da posição do layout (Overlay) acima dos medidores .  
+ * (2.8) - Adição do comando para ocultar a hud. 
+ * (2.7) - Correção de alguns plugins parameters.  
+ * (2.6) - Correção do parâmetro do Screen Layout Y não funcionar. 
+ * (2.5) - Correção de alguns plugins parameters não funcionarem.
+ * (2.4) - Correção de não apresentar os ícones de Buff e Debuff.
+ * (2.3) - Melhoria na codificação.
  * (2.2) - Adição da opção do alinhamento dos números. 
- *       - Adição do layout Overlay. 
+ *       - Adição do layout Overlay.  
  * (2.1) - Compatibilidade com MOG Battle Cursor no modo Front View. 
- * (2.0) - Faces como actors no modo Frontview. 
- *       - Opção de definir a quantidade battlers na batalha.
- * (1.5) - Correção no setup do ângulo dos medidores. 
+ * (2.0) - Faces como actors no modo Frontview.
+ *       - Opção de definir a quantidade battlers na batalha. 
+ * (1.5) - Correção no setup do ângulo dos medidores.  
  * (1.4) - Correção na prioridade do layout Screen.
  * (1.3) - Correção na posição do plugin do template. 
  * (1.2) - Adição do modo hud na vertical.
@@ -688,10 +727,6 @@
 //=============================================================================
 // ** PLUGIN PARAMETERS
 //=============================================================================
-
-//=============================================================================
-// ** PLUGIN PARAMETERS
-//=============================================================================
 　　var Imported = Imported || {};
 　　Imported.MOG_BattleHud = true;
 　　var Moghunter = Moghunter || {}; 
@@ -700,103 +735,103 @@
    
     // HUD POSITION
 	Moghunter.bhud_pos_x = Number(Moghunter.parameters['Hud X-Axis'] || -90);
-	Moghunter.bhud_pos_y = Number(Moghunter.parameters['Hud Y-Axis'] || 430);
+	Moghunter.bhud_pos_y = Number(Moghunter.parameters['Hud Y-Axis'] || 460);
 	Moghunter.bhud_space_x = Number(Moghunter.parameters['Hud Space X'] || 0);
 	Moghunter.bhud_space_y  = Number(Moghunter.parameters['Hud Space Y'] || 0);
 	Moghunter.bhud_pos_mode = String(Moghunter.parameters['Vertical Mode'] || false);
 	Moghunter.bhud_max_battle_members = Number(Moghunter.parameters['Max Battle Members'] || 4);
 	
     // Layout Overlay
-	Moghunter.bhud_layoverlay_visible = String(Moghunter.parameters['Layout2 Visible'] || "true");
+	Moghunter.bhud_layoverlay_visible = String(Moghunter.parameters['Layout2 Visible'] || "false");
 	Moghunter.bhud_layoverlay_x = Number(Moghunter.parameters['Layout2 X-Axis'] || 0);
-	Moghunter.bhud_layoverlay_y = Number(Moghunter.parameters['Layout2 X-Axis'] || 0);
+	Moghunter.bhud_layoverlay_y = Number(Moghunter.parameters['Layout2 Y-Axis'] || 0);	
 	
     // Screen Layout
 	Moghunter.bhud_screen_layout = String(Moghunter.parameters['Screen Layout'] || true);
+	Moghunter.bhud_screen_layout_x = Number(Moghunter.parameters['Screen X-Axis'] || 0);
+	Moghunter.bhud_screen_layout_y = Number(Moghunter.parameters['Screen Y-Axis'] || 0);	
 	
 	// TURN POSITION
 	Moghunter.bhud_turn_visible = String(Moghunter.parameters['Turn Visible'] || true);
 	Moghunter.bhud_turn_pos_x = Number(Moghunter.parameters['Turn X-Axis'] || 0);
-	Moghunter.bhud_turn_pos_y = Number(Moghunter.parameters['Turn Y-Axis'] || 20);		
+	Moghunter.bhud_turn_pos_y = Number(Moghunter.parameters['Turn Y-Axis'] || 0);		
 	
 	// FACE POSITION
 	Moghunter.bhud_face_visible = String(Moghunter.parameters['Face Visible'] || true);
 	Moghunter.bhud_face_shake = String(Moghunter.parameters['Face Shake Animation'] || true);
 	Moghunter.bhud_face_zoom = String(Moghunter.parameters['Face Zoom Animation'] || true);
 	Moghunter.bhud_face_animated = String(Moghunter.parameters['Face Frame Animation'] || false);
-	Moghunter.bhud_face_pos_x = Number(Moghunter.parameters['Face X-Axis'] || 56);
-	Moghunter.bhud_face_pos_y = Number(Moghunter.parameters['Face Y-Axis'] || 120);
-	Moghunter.bhud_face_priority = Number(Moghunter.parameters['Face Priority'] || 1);
+	Moghunter.bhud_face_pos_x = Number(Moghunter.parameters['Face X-Axis'] || 44);
+	Moghunter.bhud_face_pos_y = Number(Moghunter.parameters['Face Y-Axis'] || 72);
+	Moghunter.bhud_face_priority = Number(Moghunter.parameters['Face Priority'] || 0);
 	
 	// NAME POSITION
 	Moghunter.bhud_name_visible = String(Moghunter.parameters['Name Visible'] || true);
 	Moghunter.bhud_name_font_size = Number(Moghunter.parameters['Name Font Size'] || 20);
 	Moghunter.bhud_name_font_bold_size = Number(Moghunter.parameters['Name Bold Size'] || 4);
 	Moghunter.bhud_name_font_italic = String(Moghunter.parameters['Name Font Italic'] || false);	
-	Moghunter.bhud_name_pos_x = Number(Moghunter.parameters['Name X-Axis'] || 50);
-	Moghunter.bhud_name_pos_y = Number(Moghunter.parameters['Name Y-Axis'] || 150);	
+	Moghunter.bhud_name_pos_x = Number(Moghunter.parameters['Name X-Axis'] || 0);
+	Moghunter.bhud_name_pos_y = Number(Moghunter.parameters['Name Y-Axis'] || -20);	
 		
 	// HP METER POSITION
 	Moghunter.bhud_hp_meter_visible = String(Moghunter.parameters['HP Meter Visible'] || true);
-	Moghunter.bhud_hp_meter_pos_x = Number(Moghunter.parameters['HP Meter X-Axis'] || 106);
-	Moghunter.bhud_hp_meter_pos_y = Number(Moghunter.parameters['HP Meter Y-Axis'] || 70);
-	Moghunter.bhud_hp_meter_rotation = Number(Moghunter.parameters['HP Meter Angle'] || -0.47);
+	Moghunter.bhud_hp_meter_pos_x = Number(Moghunter.parameters['HP Meter X-Axis'] || 113);
+	Moghunter.bhud_hp_meter_pos_y = Number(Moghunter.parameters['HP Meter Y-Axis'] || 39);
+	Moghunter.bhud_hp_meter_rotation = Number(Moghunter.parameters['HP Meter Angle'] || 0);
 	Moghunter.bhud_hp_meter_flow = String(Moghunter.parameters['HP Meter Flow Anime'] || false);
 	
 	// HP NUMBER POSITION
 	Moghunter.bhud_hp_number_visible  = String(Moghunter.parameters['HP Number Visible'] || true);
-	Moghunter.bhud_hp_number_pos_x  = Number(Moghunter.parameters['HP Number X-Axis'] || 110);
-	Moghunter.bhud_hp_number_pos_y  = Number(Moghunter.parameters['HP Number Y-Axis'] || 45);
+	Moghunter.bhud_hp_number_pos_x  = Number(Moghunter.parameters['HP Number X-Axis'] || 175);
+	Moghunter.bhud_hp_number_pos_y  = Number(Moghunter.parameters['HP Number Y-Axis'] || 23);
 	Moghunter.bhud_maxhp_number_visible  = String(Moghunter.parameters['MaxHP Number Visible'] || false);
 	Moghunter.bhud_maxhp_number_pos_x  = Number(Moghunter.parameters['MaxHP Number X-Axis'] || 185);
 	Moghunter.bhud_maxhp_number_pos_y  = Number(Moghunter.parameters['MaxHP Number Y-Axis'] || 40);	
-    Moghunter.bhud_hp_align_type  = Number(Moghunter.parameters['HP Number Align type'] || 3);	
+    Moghunter.bhud_hp_align_type  = Number(Moghunter.parameters['HP Number Align type'] || 0);
 	
 	// MP METER POSITION
 	Moghunter.bhud_mp_meter_visible = String(Moghunter.parameters['MP Meter Visible'] || true);
-	Moghunter.bhud_mp_meter_pos_x = Number(Moghunter.parameters['MP Meter X-Axis'] || 127);
-	Moghunter.bhud_mp_meter_pos_y = Number(Moghunter.parameters['MP Meter Y-Axis'] || 121);	
-	Moghunter.bhud_mp_meter_rotation = Number(Moghunter.parameters['MP Meter Angle'] || -0.47);
+	Moghunter.bhud_mp_meter_pos_x = Number(Moghunter.parameters['MP Meter X-Axis'] || 125);
+	Moghunter.bhud_mp_meter_pos_y = Number(Moghunter.parameters['MP Meter Y-Axis'] || 77);	
+	Moghunter.bhud_mp_meter_rotation = Number(Moghunter.parameters['MP Meter Angle'] || 0);
 	Moghunter.bhud_mp_meter_flow = String(Moghunter.parameters['MP Meter Flow Anime'] || false);
 	
 	// MP NUMBER POSITION
 	Moghunter.bhud_mp_number_visible  = String(Moghunter.parameters['MP Number Visible'] || true);
-	Moghunter.bhud_mp_number_pos_x  = Number(Moghunter.parameters['MP Number X-Axis'] || 130);
-	Moghunter.bhud_mp_number_pos_y  = Number(Moghunter.parameters['MP Number Y-Axis'] || 95);
+	Moghunter.bhud_mp_number_pos_x  = Number(Moghunter.parameters['MP Number X-Axis'] || 186);
+	Moghunter.bhud_mp_number_pos_y  = Number(Moghunter.parameters['MP Number Y-Axis'] || 61);
 	Moghunter.bhud_maxmp_number_visible  = String(Moghunter.parameters['MaxMP Number Visible'] || false);
 	Moghunter.bhud_maxmp_number_pos_x  = Number(Moghunter.parameters['MaxMP Number X-Axis'] || 196);
 	Moghunter.bhud_maxmp_number_pos_y  = Number(Moghunter.parameters['MaxMP Number Y-Axis'] || 78);	
-    Moghunter.bhud_mp_align_type  = Number(Moghunter.parameters['MP Number Align type'] || 3);
-	Moghunter.bhud_mp_diagonal_number  = Number(Moghunter.parameters['MP Number Diagonal'] || true);
+    Moghunter.bhud_mp_align_type  = Number(Moghunter.parameters['MP Number Align type'] || 0);
 	
 	// TP METER POSITION
 	Moghunter.bhud_tp_meter_visible = String(Moghunter.parameters['TP Meter Visible'] || true);
-	Moghunter.bhud_tp_meter_pos_x = Number(Moghunter.parameters['TP Meter X-Axis'] || 13);
-	Moghunter.bhud_tp_meter_pos_y = Number(Moghunter.parameters['TP Meter Y-Axis'] || 78);	
-	Moghunter.bhud_tp_meter_rotation = Number(Moghunter.parameters['TP Meter Angle'] || -1.57);
+	Moghunter.bhud_tp_meter_pos_x = Number(Moghunter.parameters['TP Meter X-Axis'] || 113);
+	Moghunter.bhud_tp_meter_pos_y = Number(Moghunter.parameters['TP Meter Y-Axis'] || 115);	
+	Moghunter.bhud_tp_meter_rotation = Number(Moghunter.parameters['TP Meter Angle'] || 0);
 	Moghunter.bhud_tp_meter_flow = String(Moghunter.parameters['TP Meter Flow Anime'] || false);
 	
 	// TP NUMBER POSITION
 	Moghunter.bhud_tp_number_visible  = String(Moghunter.parameters['TP Number Visible'] || true);
-	Moghunter.bhud_tp_number_pos_x  = Number(Moghunter.parameters['TP Number X-Axis'] || 20);
-	Moghunter.bhud_tp_number_pos_y  = Number(Moghunter.parameters['TP Number Y-Axis'] || 60);
+	Moghunter.bhud_tp_number_pos_x  = Number(Moghunter.parameters['TP Number X-Axis'] || 175);
+	Moghunter.bhud_tp_number_pos_y  = Number(Moghunter.parameters['TP Number Y-Axis'] || 99);
 	Moghunter.bhud_maxtp_number_visible  = String(Moghunter.parameters['MaxTP Number Visible'] || false);
 	Moghunter.bhud_maxtp_number_pos_x  = Number(Moghunter.parameters['MaxTP Number X-Axis'] || 185);
 	Moghunter.bhud_maxtp_number_pos_y  = Number(Moghunter.parameters['MaxTP Number Y-Axis'] || 116);	
-    Moghunter.bhud_tp_align_type  = Number(Moghunter.parameters['TP Number Align type'] || 2);
-	Moghunter.bhud_tp_diagonal_number  = Number(Moghunter.parameters['TP Number Diagonal'] || false);
+    Moghunter.bhud_tp_align_type  = Number(Moghunter.parameters['TP Number Align type'] || 0);
 	
     // AT METER POSITION
 	Moghunter.bhud_at_meter_visible = String(Moghunter.parameters['ATB Meter Visible'] || true);
-	Moghunter.bhud_at_meter_pos_x = Number(Moghunter.parameters['ATB Meter X-Axis'] || 100);
-	Moghunter.bhud_at_meter_pos_y = Number(Moghunter.parameters['ATB Meter Y-Axis'] || 155);	
+	Moghunter.bhud_at_meter_pos_x = Number(Moghunter.parameters['ATB Meter X-Axis'] || 80);
+	Moghunter.bhud_at_meter_pos_y = Number(Moghunter.parameters['ATB Meter Y-Axis'] || 140);	
 	Moghunter.bhud_at_meter_rotation = Number(Moghunter.parameters['ATB Meter Angle'] || 0);
 	Moghunter.bhud_at_meter_flow = String(Moghunter.parameters['ATB Meter Flow Anime'] || false);
 	
 	// STATES POSITION
 	Moghunter.bhud_states_visible = String(Moghunter.parameters['States Visible'] || true);
 	Moghunter.bhud_states_pos_x = Number(Moghunter.parameters['States X-Axis'] || 10);
-	Moghunter.bhud_states_pos_y = Number(Moghunter.parameters['States Y-Axis'] || 150);	
+	Moghunter.bhud_states_pos_y = Number(Moghunter.parameters['States Y-Axis'] || 120);	
 
     // COMMAND WINDOWS
 	Moghunter.bhud_auto_pos = String(Moghunter.parameters['Command Auto Adjust'] || true);
@@ -831,7 +866,7 @@
     Moghunter.bhud_skill_y =  Number(Moghunter.parameters['W Skill Y-Axis'] || 444);
 	Moghunter.bhud_skill_layout = String(Moghunter.parameters['Layout Skill'] || true);
 	Moghunter.bhud_skill_lay_x =  Number(Moghunter.parameters['L Skill X-Axis'] || 0);
-    Moghunter.bhud_skill_lay_y =  Number(Moghunter.parameters['L SKill Y-Axis'] || -67);
+    Moghunter.bhud_skill_lay_y =  Number(Moghunter.parameters['L Skill Y-Axis'] || -67);
 	Moghunter.bhud_skill_width =  Number(Moghunter.parameters['W Skill Width'] || 816);
     Moghunter.bhud_skill_height =  Number(Moghunter.parameters['W Skill Height'] || 180);
 	Moghunter.bhud_skill_maxcols = Number(Moghunter.parameters['W Skill maxCols'] || 2);	
@@ -871,7 +906,7 @@
 	for (var i = 0; i < 8; i++) {
 		Moghunter.bhud_custom_pos[i] = (Moghunter.parameters['Custom Position ' + String(i + 1)] || null);
 	};
-
+		
 //=============================================================================
 // ** ImageManager
 //=============================================================================
@@ -882,6 +917,21 @@
 ImageManager.loadBHud = function(filename) {
     return this.loadBitmap('img/battlehud/', filename, 0, true);
 };		
+
+//=============================================================================
+// ** Game_Interpreter
+//=============================================================================	
+
+//==============================
+// * PluginCommand
+//==============================
+var _alias_mog_bhud_pluginCommand = Game_Interpreter.prototype.pluginCommand
+Game_Interpreter.prototype.pluginCommand = function(command, args) {
+	_alias_mog_bhud_pluginCommand.call(this,command, args)
+	if (command === "bhud_disable")  {$gameSystem._bhud_visible = false};
+	if (command === "bhud_enable")  {$gameSystem._bhud_visible = true};
+	return true;
+};
 	
 //=============================================================================
 // ** Game_Temp
@@ -916,6 +966,7 @@ Game_System.prototype.initialize = function() {
     };
 	this._bhud_auto_com = false;
 	this._bhud_pos_mode = 0;
+	this._bhud_visible = true;
 	if (String(Moghunter.bhud_pos_mode) === "true") {this._bhud_pos_mode = 1};
 	if (String(Moghunter.bhud_auto_pos) === "true") {this._bhud_auto_com = true};
 };
@@ -1342,6 +1393,8 @@ Spriteset_Battle.prototype.create_battle_hud = function() {
 Spriteset_Battle.prototype.create_screen_layout = function() {	
 	this._screen_layout = new Sprite(ImageManager.loadBHud("Layout_Screen"));
 	this._screen_layout.opacity = 0;
+	this._screen_layout.x = Moghunter.bhud_screen_layout_x;
+	this._screen_layout.y = Moghunter.bhud_screen_layout_y;
     this.addChild(this._screen_layout);
 };
 
@@ -1359,6 +1412,7 @@ Spriteset_Battle.prototype.update_hud_visible = function() {
 Spriteset_Battle.prototype.is_hud_visible = function() {
 	if ($gameMessage.isBusy()) {return false};
 	if ($gameTemp._battleEnd) {return false};
+	if (!$gameSystem._bhud_visible) {return false};
 	return true
 };
 
@@ -1746,10 +1800,10 @@ Battle_Hud.prototype.refresh_position = function() {
 	    this._turn.y = this._pos_y + Moghunter.bhud_turn_pos_y;
 	 };
 	 if (this._layout2) { 
-	  	 this._layout2.x = this._pos_x;
-	     this._layout2.y = this._pos_y;
+	  	 this._layout2.x = this._pos_x + Moghunter.bhud_layoverlay_x;
+	     this._layout2.y = this._pos_y + Moghunter.bhud_layoverlay_y;
      };
-	 this._battler._face_pos = [this._face.x,this._face.y]; 
+	 if (this._face) {this._battler._face_pos = [this._face.x,this._face.y]}; 
 };
 
 //==============================
@@ -1805,7 +1859,6 @@ Battle_Hud.prototype.create_base_sprites = function() {
 		this.create_layout();
    	    this.create_face();	    		
     };
-	if (String(Moghunter.bhud_layoverlay_visible) == "true") {this.create_layoutOverlay()};
 };
 
 //==============================
@@ -1815,7 +1868,8 @@ Battle_Hud.prototype.create_sprites = function() {
 	this.create_hp_meter();
 	this.create_mp_meter();
     this.create_tp_meter();
-	this.create_at_meter();	 
+	this.create_at_meter();	
+	if (String(Moghunter.bhud_layoverlay_visible) == "true") {this.create_layoutOverlay()};
 	this.create_hp_number();	
 	this.create_maxhp_number();
 	this.create_mp_number();	
@@ -1864,6 +1918,7 @@ Battle_Hud.prototype.update_visible = function(sprite) {
 Battle_Hud.prototype.is_hud_visible = function(sprite) {
 	if ($gameMessage.isBusy()) {return false};
 	if ($gameTemp._battleEnd) {return false};
+	if (!$gameSystem._bhud_visible) {return false};
 	return true
 };
 
@@ -1905,6 +1960,9 @@ Battle_Hud.prototype.refresh_meter_flow = function(sprite,value,value_max,type,f
 //==============================
 Battle_Hud.prototype.refresh_number = function(sprites,value,img_data,x,y,type) {
     numbers = Math.abs(value).toString().split("");  
+	var nx = 0;
+	var ny = 0;
+	var dir = 1;
    	for (var i = 0; i < sprites.length ; i++) {sprites[i].visible = false;
 	   if (i > numbers.length) {return};
 	   var n = Number(numbers[i]);
@@ -1916,12 +1974,16 @@ Battle_Hud.prototype.refresh_number = function(sprites,value,img_data,x,y,type) 
 	        var nx = -(img_data[2] * i) + ((img_data[2] / 2) * numbers.length);
 	   } else if (this._number_align[type] === 2) {
 	        var nx = -(img_data[2] * i);
-	   } else {
+	   } else if (this._number_align[type] === 3) {
 		  var nx = -(img_data[2] * i);
-	      var ny = (img_data[3] * i);
-	      sprites[i].y = y - ny;			
+	      var ny = (img_data[3] * i);				
+	   } else {
+	      var nx = -(img_data[2] * i) + (img_data[2] * numbers.length);
+	      var ny = (img_data[3] / 2) * dir;		  
 	   };
 	   sprites[i].x = x - nx;
+	   sprites[i].y = y - ny;
+	   dir = dir === 0 ? 1 : 0;
     };
 };
 
@@ -2511,7 +2573,7 @@ Battle_Hud.prototype.refresh_at_meter_flow = function(sprite,value,value_max,typ
 Battle_Hud.prototype.at = function() {
  if (Imported.MOG_ATB) {return this._battler._atb};
  if (Imported.Ellye_ATB) {return this._battler.atb};
- if (Imported.YEP_X_BattleSysATB) {return this._battler._atbSpeed};
+ if (Imported.YEP_X_BattleSysATB) {return Math.abs(this._battler._atbSpeed)};
   return -1;	
 }
 
@@ -2521,7 +2583,7 @@ Battle_Hud.prototype.at = function() {
 Battle_Hud.prototype.max_at = function() {
   if (Imported.MOG_ATB) {return this._battler._max_atb};
   if (Imported.Ellye_ATB) {return this._ellye_max_atb};
-  if (Imported.YEP_X_BattleSysATB) {return BattleManager._atbTarget};
+  if (Imported.YEP_X_BattleSysATB) {return Math.abs(BattleManager._atbTarget)};
   return 1;	
 };
 
@@ -2531,7 +2593,7 @@ Battle_Hud.prototype.max_at = function() {
 Battle_Hud.prototype.cast_at = function() {
   if (Imported.MOG_ATB) {return this._battler._cast_atb[1]};
   if (Imported.Ellye_ATB) {return this._battler.current_cast_atb};
-  if (Imported.YEP_X_BattleSysATB) {return this._battler._atbCharge};
+  if (Imported.YEP_X_BattleSysATB) {return Math.abs(this._battler._atbCharge)};
   return 0;	
 };
 
@@ -2541,7 +2603,7 @@ Battle_Hud.prototype.cast_at = function() {
 Battle_Hud.prototype.cast_max_at = function() {
   if (Imported.MOG_ATB) {return this._battler._cast_atb[2]};
   if (Imported.Ellye_ATB) {return this._battler.target_cast_atb};
-  if (Imported.YEP_X_BattleSysATB) {return BattleManager._atbCharge};
+  if (Imported.YEP_X_BattleSysATB) {return Math.abs(BattleManager._atbCharge)};
   return 1;	
 };
 
@@ -2592,29 +2654,20 @@ Battle_Hud.prototype.refresh_states = function() {
 	this._states_data[0] = 0;
 	this._states_data[2] = 0;
 	this._state_icon.visible = false;
-	if (this._battler.states().length == 0) {this._states_data[1] = 0;return};
-	if (this._battler.states()[this._states_data[1]]) {
-		var state_id = this._battler.states()[this._states_data[1]].id;
-		if ($dataStates[state_id].iconIndex == 0) {
-			for (var i = 0; i < this._battler.states().length; i++) {
-			this._states_data[1] += 1;
-         	if (this._states_data[1] >= this._battler.states().length) {
-	        	this._states_data[1] = 0};			
-		        var state_id = this._battler.states()[this._states_data[1]].id;
-				if ($dataStates[state_id].iconIndex > 0) {break};
-		   };
-		};		
-		this._states_data[0] = $dataStates[state_id].iconIndex;
+	if (this._battler.allIcons().length == 0) {this._states_data[1] = 0;return};
+       if (this._battler.allIcons()[this._states_data[1]]) {	
+		this._states_data[0] = this._battler.allIcons()[this._states_data[1]];
 		this._state_icon.visible = true;
 		var sx = this._states_data[0] % 16 * 32;
 		var sy = Math.floor(this._states_data[0] / 16) * 32;
 		this._state_icon.setFrame(sx, sy, 32, 32);
-		this._battler.need_refresh_bhud_states = false;
-	};
-	this._states_old = this._battler.states();
+		this._battler.need_refresh_bhud_states = false;	
+	
+	   };
 	this._states_data[1] += 1;
-	if (this._states_data[1] >= this._battler.states().length) {
-		this._states_data[1] = 0};
+	if (this._states_data[1] >= this._battler.allIcons().length) {
+		this._states_data[1] = 0
+	};
 };
 
 //==============================
