@@ -387,7 +387,7 @@ Yanfly.Param.MSGNameBoxText = String(Yanfly.Parameters['Name Box Added Text']);
 Yanfly.Message.Bitmap_initialize = Bitmap.prototype.initialize;
 Bitmap.prototype.initialize = function(width, height) {
 		Yanfly.Message.Bitmap_initialize.call(this, width, height);
-		this.fontBold = true;
+		this.fontBold = false;
 };
 
 Yanfly.Message.Bitmap_makeFontNameText = Bitmap.prototype._makeFontNameText;
@@ -513,8 +513,8 @@ Yanfly.Message.Window_Base_resetFontSettings =
 		Window_Base.prototype.resetFontSettings;
 Window_Base.prototype.resetFontSettings = function() {
     Yanfly.Message.Window_Base_resetFontSettings.call(this);
-		this.contents.fontBold = true;
-		this.contents.fontItalic = true;
+		this.contents.fontBold = false;
+		this.contents.fontItalic = false;
 		this.contents.outlineColor = 'rgba(0, 0, 0, 0.5)';
 		this.contents.outlineWidth = Yanfly.Param.MSGFontOutline;
 };
