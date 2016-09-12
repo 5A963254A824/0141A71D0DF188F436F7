@@ -1,6 +1,6 @@
 [
 null,
-{"id":1,"expanded":true,"name":"Show Stage and Dining Area","order":10,"parentId":2,"scrollX":525,"scrollY":295.5},
+{"id":1,"expanded":true,"name":"Show Stage and Dining Area","order":10,"parentId":2,"scrollX":511,"scrollY":323},
 {"id":2,"expanded":true,"name":"FNaFb1 Location","order":9,"parentId":0,"scrollX":530,"scrollY":319},
 {"id":3,"expanded":true,"name":"Restrooms","order":12,"parentId":2,"scrollX":511,"scrollY":323},
 {"id":4,"expanded":true,"name":"Backroom","order":11,"parentId":2,"scrollX":525,"scrollY":323.5},
@@ -42,5 +42,6 @@ null,
 {"id":40,"expanded":false,"name":"Party Room 2","order":30,"parentId":19,"scrollX":511,"scrollY":325},
 {"id":41,"expanded":false,"name":"Party Room 4","order":33,"parentId":19,"scrollX":832,"scrollY":640},
 {"id":42,"expanded":false,"name":"Cam 12 [2]","order":42,"parentId":23,"scrollX":532,"scrollY":305},
-{"id":43,"expanded":false,"name":"Cam 08","order":43,"parentId":22,"scrollX":530,"scrollY":319}
+{"id":43,"expanded":false,"name":"Cam 08","order":43,"parentId":22,"scrollX":530,"scrollY":319},
+{"id":44,"expanded":false,"name":"Tutorial Fight","order":44,"parentId":0,"scrollX":511,"scrollY":323}
 ]
