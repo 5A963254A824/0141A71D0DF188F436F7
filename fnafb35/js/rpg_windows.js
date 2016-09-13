@@ -1407,7 +1407,7 @@ Window_Command.prototype.drawItem = function(index) {
 };
 
 Window_Command.prototype.itemTextAlign = function() {
-    return 'left';
+    return 'center';
 };
 
 Window_Command.prototype.isOkEnabled = function() {
