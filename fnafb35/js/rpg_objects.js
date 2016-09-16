@@ -3205,7 +3205,7 @@ Game_Battler.prototype.gainSilentTp = function(value) {
 };
 
 Game_Battler.prototype.initTp = function() {
-    this.setTp(Math.randomInt(25));
+    this.setTp(Math.randomInt(0));
 };
 
 Game_Battler.prototype.clearTp = function() {
@@ -3213,7 +3213,7 @@ Game_Battler.prototype.clearTp = function() {
 };
 
 Game_Battler.prototype.chargeTpByDamage = function(damageRate) {
-    var value = Math.floor(50 * damageRate * this.tcr);
+    var value = Math.floor(0);
     this.gainSilentTp(value);
 };
 
