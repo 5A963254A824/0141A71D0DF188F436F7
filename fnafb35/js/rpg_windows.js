@@ -5110,7 +5110,7 @@ Window_BattleLog.prototype.displayActionResults = function(subject, target) {
 
 Window_BattleLog.prototype.displayFailure = function(target) {
     if (target.result().isHit() && !target.result().success) {
-        this.push('addText', TextManager.actionFailure.format(target.name()));
+        /*this.push('addText', TextManager.actionFailure.format(target.name()));*/
     }
 };
 
