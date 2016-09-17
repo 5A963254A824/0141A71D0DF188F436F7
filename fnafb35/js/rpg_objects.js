@@ -3205,7 +3205,7 @@ Game_Battler.prototype.gainSilentTp = function(value) {
 };
 
 Game_Battler.prototype.initTp = function() {
-    this.setTp(Math.randomInt(0));
+    this.setTp(50);
 };
 
 Game_Battler.prototype.clearTp = function() {
