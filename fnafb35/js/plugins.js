@@ -14,5 +14,6 @@ var $plugins =
 {"name":"makestargetnamedisplay","status":true,"description":"","parameters":{}},
 {"name":"RepositionTextBox","status":true,"description":"Enable a way to manually set the message window Y position.","parameters":{}},
 {"name":"NecroBetterText","status":true,"description":"Adds more text features! <pluginID Necro Better Text>","parameters":{"Wrap On":"false","Alignment":"left"}},
-{"name":"Exhydra_WindowOptions","status":true,"description":"[1.03] Enable or disable various windows.","parameters":{"─ Battle":"───────────────","Disable Party Command":"true","─ Plugin":"───────────────","Plugin GID":"eXa-zfFroWMnUdXxOeb"}}
+{"name":"Exhydra_WindowOptions","status":true,"description":"[1.03] Enable or disable various windows.","parameters":{"─ Battle":"───────────────","Disable Party Command":"true","─ Plugin":"───────────────","Plugin GID":"eXa-zfFroWMnUdXxOeb"}},
+{"name":"HIME_ChangeBattleback","status":true,"description":"v1.1 Allows you to change battle background images during battle.","parameters":{}}
 ];
