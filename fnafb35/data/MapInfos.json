@@ -1,8 +1,8 @@
 [
 null,
-{"id":1,"expanded":true,"name":"Show Stage and Dining Area","order":10,"parentId":2,"scrollX":511,"scrollY":323},
+{"id":1,"expanded":true,"name":"Show Stage and Dining Area","order":10,"parentId":2,"scrollX":508,"scrollY":325},
 {"id":2,"expanded":true,"name":"FNaFb1 Location","order":9,"parentId":0,"scrollX":525,"scrollY":319.5},
-{"id":3,"expanded":true,"name":"Restrooms","order":12,"parentId":2,"scrollX":511,"scrollY":323},
+{"id":3,"expanded":true,"name":"Restrooms","order":12,"parentId":2,"scrollX":508,"scrollY":325},
 {"id":4,"expanded":true,"name":"Backroom","order":11,"parentId":2,"scrollX":525,"scrollY":323.5},
 {"id":5,"expanded":true,"name":"Pirate Cove","order":13,"parentId":2,"scrollX":832,"scrollY":640},
 {"id":6,"expanded":true,"name":"West Hall","order":15,"parentId":2,"scrollX":534,"scrollY":305},
