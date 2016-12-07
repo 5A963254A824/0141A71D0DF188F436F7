@@ -2,7 +2,7 @@
 null,
 {"id":1,"expanded":true,"name":"Show Stage and Dining Area","order":10,"parentId":2,"scrollX":508,"scrollY":325},
 {"id":2,"expanded":true,"name":"FNaFb1 Location","order":9,"parentId":0,"scrollX":525,"scrollY":319.5},
-{"id":3,"expanded":true,"name":"Restrooms","order":12,"parentId":2,"scrollX":508,"scrollY":325},
+{"id":3,"expanded":true,"name":"Restrooms","order":12,"parentId":2,"scrollX":531.5,"scrollY":319},
 {"id":4,"expanded":true,"name":"Backroom","order":11,"parentId":2,"scrollX":525,"scrollY":323.5},
 {"id":5,"expanded":true,"name":"Pirate Cove","order":13,"parentId":2,"scrollX":832,"scrollY":640},
 {"id":6,"expanded":true,"name":"West Hall","order":15,"parentId":2,"scrollX":534,"scrollY":305},
@@ -46,7 +46,7 @@ null,
 {"id":44,"expanded":false,"name":"Tutorial Fight","order":45,"parentId":0,"scrollX":532,"scrollY":305},
 {"id":45,"expanded":false,"name":"MAP045","order":20,"parentId":2,"scrollX":525,"scrollY":295.5},
 {"id":46,"expanded":true,"name":"Dungeons n' Shit","order":46,"parentId":0,"scrollX":1112.7272727272727,"scrollY":709.0909090909091},
-{"id":47,"expanded":true,"name":"Toy Bonnie's Spookatorium FL 1","order":47,"parentId":46,"scrollX":938,"scrollY":731},
-{"id":48,"expanded":false,"name":"TBS RS","order":48,"parentId":47,"scrollX":508,"scrollY":325},
-{"id":49,"expanded":false,"name":"Toy Bonnie's Spookatorium FL 2","order":49,"parentId":46,"scrollX":938,"scrollY":731}
+{"id":47,"expanded":true,"name":"Toy Bonnie's Spookatorium FL 1","order":47,"parentId":46,"scrollX":1294.8,"scrollY":732},
+{"id":48,"expanded":false,"name":"TBS RS","order":48,"parentId":47,"scrollX":647.4,"scrollY":366},
+{"id":49,"expanded":false,"name":"Toy Bonnie's Spookatorium FL 2","order":49,"parentId":46,"scrollX":802.1999999999999,"scrollY":730.8}
 ]
